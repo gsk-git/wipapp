@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/app.css') }}">
+    <!--Title-->
+    <title>Where is Parking!</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-8 overflow-hidden vh-100 text-light" style="background-color: #121212;">
+          <div class="container-fluid pt-5">
+            <div class="row pt-5 align-items-start">
+              <div class="col-12">
+                <h1 style="font-size: 22px;"><strong>Do you ask <u>Where is Parking</u> often?</strong></h1>
+                <p style="font-size: 18px;">then you are in right place. Find <strike>available</strike> parkings near you instantly</p>
+              </div>
+            </div>
+            <div class="row pt-5 align-items-center" style="width: 1200px;">
+              <div class="col-12">
+                <p style="font-size: 20px;"><strong>What you need to do !</strong></p>
+                <ul style="font-size: 18px;">
+                  <li>No account creation needed</li>
+                  <li>Get your current location</li>
+                  <li>Find list of parking in the results</li>
+                  <li>Select your desired parking spot</li>
+                  <li>Navigate and park your car</li>
+                </ul>
+              </div>
+            </div>
+            <div class="row pt-5" style="min-height: 600px;">
+              <div class="col-6 pt-5">
+                <div class="list-group">
+                  <a href="#" class="list-group-item md-5">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">...</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading">List group item heading</h4>
+                    <p class="list-group-item-text">...</p>
+                  </a>
+                </div>
+              </div>
+              <div class="col-6 pt-5" style="color: #242424;">
+                <p class="sent text-right">WIP</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--<div class="col-2 bg-dark pl-4 pt-5" style="background-image: url('{{ url_for('static', filename='media/freepik__wallpaper-for-an-app-which-shows-available-parking__13691.jpeg') }}'); background-repeat: no-repeat; background-position-x: right; background-size: cover;">
+        </div>-->
+        <div class="col-2 bg-dark pl-4 pt-5" style="background-image: url('{{ url_for('static', filename='media/freepik__pixel-art-8bits-a-cityscape-featuring-empty-parkin__13689.jpeg') }}'); background-repeat: no-repeat; background-position-x: right; background-size: cover;">
+        </div>
+        <div class="col-2 bg-dark pl-4 pt-5" style="background-image: url('{{ url_for('static', filename='media/freepik__pixel-art-8bits-an-aerial-view-of-a-bustling-urban__13688.jpeg') }}'); background-repeat: no-repeat; background-position-x: right; background-size: cover;">
+        </div>
+      </div>
+    </div>  
+    <!--<nav id=AA class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+      <a class="navbar-brand" href="#"><strong>Where is Parking</strong></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href=locate>Locate</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href=admin>Console</a>
+          </li>
+        </ul>
+      </div>
+    </nav>-->
+    
+    <!--<div class="container mt-5 rouded">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card  shadow-sm bg-white rounded">
+            <div class="card-header">
+              <h5 class="text-left">Want to find parkings?</h5>
+              <h6 class="text-left">Create a new accout</h6>
+            </div>
+            <div class="card-body">
+              <form id="form">
+                <div class="form-group">
+                  <input name="emailId" type="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <input name="firstName" type="text" class="form-control" placeholder="Enter first name">
+                </div>
+                <div class="form-group">
+                  <input name="lastName" type="text" class="form-control" placeholder="Enter last name">
+                </div>
+                <div class="form-group">
+                  <input name="mobile" type="phone" class="form-control" placeholder="Enter mobile number">
+                </div>
+                <div class="form-group">
+                  <input name="city" type="text" class="form-control" placeholder="Enter city">
+                </div>
+                <div class="form-group">
+                  <input name="gender" type="text" class="form-control" placeholder="Enter gender">
+                </div>
+                <div class="form-group">
+                  <input name="password" type="password" class="form-control" id="password" placeholder="Password">
+                </div>
+                <input type="submit" class="btn btn-primary btn-block" value="Submit">
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{{ url_for('static', filename='/js/form.js') }}" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
