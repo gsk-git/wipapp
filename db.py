@@ -1,35 +1,53 @@
-from google.cloud.sql.connector import Connector, IPTypes
-import sqlalchemy
+"""
+This module handles database connections and operations for the Where Is Parking app.
+It uses Google Cloud SQL connector to establish a connection to a MySQL database.
+The module provides functions for inserting new user data into the 'Users' table.
+It also demonstrates basic database querying.  Note that error handling and security
+best practices are minimal in this example and should be enhanced for production use.
+"""
 import uuid
+import sqlalchemy
+from google.cloud.sql.connector import Connector
 
-# initialize connector
-connector = Connector()
+DATABASE_URL = "mysql+pymysql://wipdb:@dmin$4321@where-is-parking-app:asia-south1:wip-dev-gcp-csql/wip"
 
-# getconn now set to private IP
-def getconn():
-    conn = connector.connect(
-      "where-is-parking-app:asia-south1:wip-dev-gcp-csql",
-      "pymysql",
-      user="wipdb",
-      password="@dmin$4321",
-      db="wip",
-    )
-    return conn
+def insert_user(fname, lname, email, city, gen, mob, pswd):
+    """Inserts a new user into the Users table."""
+    try:
+        # Create a connection pool using sqlalchemy.create_engine
+        engine = sqlalchemy.create_engine(DATABASE_URL)
 
-# create connection pool
-pool = sqlalchemy.create_engine("mysql+pymysql://", creator=getconn)
+        # Define the insert query
+        insert_query = sqlalchemy.text(
+            "INSERT INTO Users(UUID,LastName,FirstName,EmailID,City,Gender,Mobile,PassD) VALUES (:UUID,:LastName,:FirstName,:EmailID,:City,:Gender,:Mobile,:PassD)"
+        )
 
-insert_q = sqlalchemy.text("INSERT INTO Users(UUID,LastName,FirstName,EmailID,City,Gender,Mobile,PassD) VALUES (:UUID,:LastName,:FirstName,\
-                            :EmailID,:City,:Gender,:Mobile,:PassD)")
-insert_v = {"UUID":str(uuid.uuid4()),"LastName":lname,"FirstName":fname,"EmailID":email, "City":city,"Gender":gen,"Mobile":mob,"PassD":pswd}
+        # Prepare the insert values
+        insert_values = {
+            "UUID": str(uuid.uuid4()),
+            "LastName": lname,
+            "FirstName": fname,
+            "EmailID": email,
+            "City": city,
+            "Gender": gen,
+            "Mobile": mob,
+            "PassD": pswd,
+        }
 
-# connect to connection pool
-with pool.connect() as db_conn:
-    # query database and fetch results
-    results = db_conn.execute(sqlalchemy.text("SELECT * FROM Users")).fetchone()
-    db_conn.execute(sqlalchemy.text(insert_q, parameters=insert_v))
-    db_conn.commit()
-    print(results)
+        # Establish a connection and execute the query
+        with engine.connect() as connection:
+            result = connection.execute(insert_query, insert_values)
+            connection.commit()
+            print(f"User inserted successfully: {result.rowcount}")
 
-# cleanup connector
-connector.close()
+    except Exception as e:
+        print(f"Error inserting user: {e}")
+
+def get_user():
+    """Fetches all users from the Users table."""
+    engine = sqlalchemy.create_engine(DATABASE_URL)
+    with engine.connect() as connection:
+        result = connection.execute(sqlalchemy.text("SELECT * FROM Users")).fetchall()
+        print(result)
+
+
