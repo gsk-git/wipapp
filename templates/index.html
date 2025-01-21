@@ -36,17 +36,17 @@
               </div>
             </div>
             <div class="row pt-5" style="min-height: 600px;">
-              <div class="col-6 pt-5">
-                  <button type="submit" class="btn btn-outline-light btn-lg mb-5 d-block rounded-8">
-                    <i style="float: right;" class="pt-1 bi bi-arrow-right"></i>
-                    <p class="list-group-item-heading text-left lh-sm" style="font-size: 22px;/*! line-height: 0.9; *//*! margin-bottom: 16px; */"><strong>Search parking locations!</strong></p>
-                    <p class="list-group-item-text text-left lead lh-sm" style="/*! line-height: 0.9; */margin-bottom: 5px;">As a user relieve your stress search for parkings near you</p>
+              <div class="col-6 pt-5 text-left lead">
+                  <button type="button" class="btn btn-outline-light btn-lg mbtn">
+                    <i class="bi bi-arrow-right mbtn-ico"></i>
+                    <p class="lh-sm mbtn-text"><strong>Search parking locations!</strong></p>
+                    <p class="lh-sm mbtn-ptext">As a user relieve your stress search for parkings near you</p>
                   </button>
-                  
-                  <a href="#" class="btn btn-outline-light btn-lg d-block rounded-8 lh-sm">
-                    <p class="list-group-item-heading text-left lh-sm" style="font-size: 22px;"><strong>Add new parkings</strong></p>
-                    <p class="list-group-item-text text-left lh-sm">o7 All hail admin</p>
-                  </a>
+                  <button type="button" class="btn btn-outline-light btn-lg mbtn">
+                    <i class="bi bi-arrow-right mbtn-ico"></i>
+                    <p class="lh-sm mbtn-text"><strong>Add parking locations!</strong></p>
+                    <p class="lh-sm mbtn-ptext">As a admin add parking points onto awesome database</p>
+                  </button>
               </div>
               <div class="col-6 pt-5" style="color: #242424;">
                 <p class="sent text-right">WIP</p>
@@ -54,9 +54,9 @@
             </div>
           </div>
         </div>
-        <div class="col-2 bg-dark pl-4 pt-5" style="background-image: url('{{ url_for('static', filename='media/freepik__pixel-art-8bits-a-cityscape-featuring-empty-parkin__13689.jpeg') }}'); background-repeat: no-repeat; background-position-x: right; background-size: cover;">
+        <div id="img1" class="col-2 bg-dark pl-4 pt-5 bg-img" style="background-image: url('{{ url_for('static', filename='media/freepik__pixel-art-8bits-a-cityscape-featuring-empty-parkin__13689.jpeg') }}'); background-size: cover;">
         </div>
-        <div class="col-2 bg-dark pl-4 pt-5" style="background-image: url('{{ url_for('static', filename='media/freepik__pixel-art-8bits-an-aerial-view-of-a-bustling-urban__13688.jpeg') }}'); background-repeat: no-repeat; background-position-x: right; background-size: cover;">
+        <div id="img2" class="col-2 bg-dark pl-4 pt-5 b2g-img" style="background-image: url('{{ url_for('static', filename='media/freepik__pixel-art-8bits-an-aerial-view-of-a-bustling-urban__13688.jpeg') }}'); background-size: cover;">
         </div>
       </div>
     </main>  
@@ -118,7 +118,6 @@
     </div>-->
 
     <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{{ url_for('static', filename='/js/form.js') }}" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>

@@ -11,3 +11,59 @@
     font-size: 300px !important;
 }
 
+.mbtn {
+    width: 600px !important;
+    display: block !important;
+    margin-bottom: 50px !important;
+    padding: 20px !important;
+}
+
+.mbtn-text {
+    text-align: initial !important;
+    margin: 0 0 5px 0 !important;
+    font-size: 22px;
+    font-weight: 400 !important;
+}
+
+.mbtn-ptext {
+    text-align: initial !important;
+    margin: 0 !important;
+    font-size: 18px;
+}
+
+.mbtn-ico {
+    float: right !important;
+    margin: 0px auto !important;
+}
+
+.bg-img {
+    animation-name: motionimg;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motionimg{ 
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 5000px;
+    }
+}
+
+.b2g-img {
+    animation-name: motionimg2;
+    animation-duration: 60s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes motionimg2{ 
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 -5000px;
+    }
+}
