@@ -6,13 +6,7 @@ connector = Connector()
 
 # getconn now set to private IP
 def getconn():
-    conn = connector.connect(
-      "where-is-parking-app:asia-south1:wip-dev-gcp-csql",
-      "pymysql",
-      user="wipdb",
-      password="@dmin$4321",
-      db="wip",
-    )
+    conn = connector.connect(    )
     return conn
 
 # create connection pool
