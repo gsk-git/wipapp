@@ -22,5 +22,9 @@ Are you tired of wasting precious time circling blocks looking for a parking spo
 4. **Navigate to your spot:**  Follow the in-app directions to your chosen parking location.
 5. **Pay for your parking:**  Pay securely through the app.
 
-**Contributing:**
-(Instructions on how to contribute to the project)
+**How to run in local system**
+1. Build docker image
+2. Run it using docker desktop or docker command
+
+
+
