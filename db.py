@@ -6,7 +6,7 @@ connector = Connector()
 
 # getconn now set to private IP
 def getconn():
-    conn = connector.connect(    )
+    conn = connector.connect("")
     return conn
 
 # create connection pool
