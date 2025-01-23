@@ -14,7 +14,7 @@
 .mbtn {
     width: 600px !important;
     display: block !important;
-    margin-bottom: 50px !important;
+    margin-bottom: 30px !important;
     padding: 20px !important;
 }
 
@@ -37,33 +37,42 @@
 }
 
 .bg-img {
-    animation-name: motionimg;
+    animation-name: bg-img;
     animation-duration: 60s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
-}
-
-@keyframes motionimg{ 
-    0% {
-        background-position: 0 0;
-    }
-    100% {
-        background-position: 0 5000px;
-    }
 }
 
 .b2g-img {
-    animation-name: motionimg2;
+    animation-name: b2g-img;
     animation-duration: 60s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
 }
 
-@keyframes motionimg2{ 
+.cuslist {
+    list-style: none !important;
+    line-height: 180% !important;
+}
+
+.cuslist li::before {
+    content:"📋 " !important;
+}
+
+@keyframes bg-img{ 
     0% {
         background-position: 0 0;
     }
     100% {
-        background-position: 0 -5000px;
+        background-position: 0 -6000px;
+    }
+}
+
+@keyframes b2g-img{ 
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 0 6000px;
     }
 }
