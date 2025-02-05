@@ -1,10 +1,10 @@
 FROM python:3.12
 
-WORKDIR /wip
-COPY . /wip
+WORKDIR /wipapp
+COPY . /wipapp
 
 RUN pip install --upgrade pip
-RUN pip install requests flask python-dotenv sqlalchemy uuid cloud-sql-python-connector[pymysql] gunicorn
+RUN pip install -r requirements.txt
 
 EXPOSE 8080
 

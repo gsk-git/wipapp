@@ -37,12 +37,12 @@
             </div>
             <div class="row pt-5" style="min-height: 600px;">
               <div class="col-6 pt-5 text-left lead">
-                  <button type="button" class="btn btn-outline-light btn-lg mbtn">
+                  <button id="maps" type="button" class="btn btn-outline-light btn-lg mbtn">
                     <i class="bi bi-arrow-right mbtn-ico"></i>
                     <p class="lh-sm mbtn-text"><strong>Search parking locations!</strong></p>
                     <p class="lh-sm mbtn-ptext">As a user relieve your stress search for parkings near you</p>
                   </button>
-                  <button type="button" class="btn btn-outline-light btn-lg mbtn">
+                  <button id="admin" type="button" class="btn btn-outline-light btn-lg mbtn">
                     <i class="bi bi-arrow-right mbtn-ico"></i>
                     <p class="lh-sm mbtn-text"><strong>Add parking locations!</strong></p>
                     <p class="lh-sm mbtn-ptext">As a admin add parking points onto awesome database</p>
@@ -60,65 +60,9 @@
         </div>
       </div>
     </main>  
-    <!--<nav id=AA class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
-      <a class="navbar-brand" href="#"><strong>Where is Parking</strong></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href=locate>Locate</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href=admin>Console</a>
-          </li>
-        </ul>
-      </div>
-    </nav>-->
-    
-    <!--<div class="container mt-5 rouded">
-      <div class="row justify-content-center">
-        <div class="col-md-6">
-          <div class="card  shadow-sm bg-white rounded">
-            <div class="card-header">
-              <h5 class="text-left">Want to find parkings?</h5>
-              <h6 class="text-left">Create a new accout</h6>
-            </div>
-            <div class="card-body">
-              <form id="form">
-                <div class="form-group">
-                  <input name="emailId" type="email" class="form-control" placeholder="Enter email">
-                </div>
-                <div class="form-group">
-                  <input name="firstName" type="text" class="form-control" placeholder="Enter first name">
-                </div>
-                <div class="form-group">
-                  <input name="lastName" type="text" class="form-control" placeholder="Enter last name">
-                </div>
-                <div class="form-group">
-                  <input name="mobile" type="phone" class="form-control" placeholder="Enter mobile number">
-                </div>
-                <div class="form-group">
-                  <input name="city" type="text" class="form-control" placeholder="Enter city">
-                </div>
-                <div class="form-group">
-                  <input name="gender" type="text" class="form-control" placeholder="Enter gender">
-                </div>
-                <div class="form-group">
-                  <input name="password" type="password" class="form-control" id="password" placeholder="Password">
-                </div>
-                <input type="submit" class="btn btn-primary btn-block" value="Submit">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>-->
-
+  
     <!-- Optional JavaScript -->
-    <script src="{{ url_for('static', filename='/js/form.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='/js/main.js') }}" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>

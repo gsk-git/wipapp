@@ -1,0 +1,8 @@
+requests==2.32.3
+flask==3.1.0
+python-dotenv==1.0.1
+sqlalchemy==2.0.37
+uuid==1.30
+cloud-sql-python-connector[pymysql]==1.16.0
+gunicorn==23.0.0
+virtualenv==20.29.1
