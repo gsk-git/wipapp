@@ -1,7 +1,6 @@
-"""
-This module creates a Flask application that renders an HTML template.
-It defines a root route ('/') that serves the 'index.html' template.
-"""
+# This module creates a Flask application that renders an HTML template.
+# It defines a root route ('/') that serves the 'index.html' template.
+
 import os
 from flask import Flask, render_template
 
